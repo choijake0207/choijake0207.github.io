@@ -1,0 +1,101 @@
+@import url("./Assets/mononoki");
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--default-background);
+    font-family: "Mononoki";
+    overflow-y: scroll;
+  
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --default-red: rgb(206,54,92);
+    --default-white: white;
+    --default-green: rgb(92,179,129);
+    --default-blue:rgb(101,192,238);
+    --default-yellow: rgb(226,181,75);
+    --default-background: rgb(23,24,28);
+}
+a {
+    text-decoration: none;
+    color: var(--default-white)
+}
+
+.header {
+    background: var(--default-background);
+    box-sizing: border-box;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-bottom: 1px solid var(--default-white);
+}
+.header a {
+    font-size: 1.25em;
+}
+.gh-logo {
+    filter:invert(1)drop-shadow(1px 1px 2px var(--default-red));
+    width: 2em;
+    transition: .3s ease
+}
+.gh-logo:hover {
+    filter: invert(1)drop-shadow(1px 1px 5px var(--default-green))
+}
+.header nav {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+
+
+.section {
+    height: 100vh;
+    position: relative;
+}
+.scroll-logo {
+    position: absolute;
+    filter: invert(.5);
+    bottom: 7%;
+    left: 50%;
+    animation: bounce 2s infinite
+}
+.scroll-logo:hover {
+    filter: invert(1)
+}
+
+
+
+
+#Greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-white);
+    font-size: 2em;
+}
+.greeting-box {
+    width: 40%;
+    transform: translateY(-10%);
+    text-align: center;
+}
+.highlight {
+    color: var(--default-yellow);
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
