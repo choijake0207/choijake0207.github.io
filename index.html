@@ -5,14 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        Hello there!
-    </header>
-    <main class="content">
-
-    </main>
+    <div class="wrap">
+        <header class="header">
+            <div class="logo">
+                <a href="https://github.com/choijake0207" class="github">
+                    <img class="gh-logo"src="./Assets/github-logo-fill.svg">
+                </a>
+            </div>
+            <nav>
+                <a href="#About">About Me</a>
+                <a href="#Gallery">My Work</a>
+                <a href="#Contact">More Info</a>
+            </nav>
+        </header>
+        
+        <section class="section" id="Greeting">
+            <div class="greeting-box">
+                <h1>Hey! I'm <span class="highlight"> Jake Choi</span>. <br/>I'm a front-end developer</h1>
+            </div>
+            <a className="scroll-button" href="#About">
+                <img class="scroll-logo" src="./Assets/arrow-down-fill.svg">
+            </a>
+        </section>
     
+        <section class="section" id="About">
+            <h1>About Me</h1>
+            <p></p>
+            <a className="scroll-button" href="#Gallery">
+                <img class="scroll-logo" src="./Assets/arrow-down-fill.svg">
+            </a>
+        </section>
+        <section class="section" id="Gallery">
+            <a className="scroll-button" href="#Contact">
+                <img class="scroll-logo" src="./Assets/arrow-down-fill.svg">
+            </a>
+        </section>
+        <section class="section" id="Contact">
+            <a className="scroll-button" href="#Greeting">
+                <img class="scroll-logo" src="./Assets/arrow-up-fill.svg">
+            </a>
+        </section>
+    </div>
 </body>
 </html>
