@@ -32,13 +32,47 @@
         </section>
     
         <section class="section" id="About">
-            <h1>About Me</h1>
-            <p></p>
+            <div class="about-box">
+                <h1>About Me</h1>
+                <div class="about-details">
+                    <img src="./Assets/Screenshot 2024-09-22 at 17.04.24.png">
+                    <p>I'm a recent college graduate who has decided to switch careers into front-end development. <br/> For the last year, I have been self-learning everything related to FE development. I have a passion for creating and designing anything ranging from games to web applications.</p>
+                </div>
+            </div>
+                
             <a className="scroll-button" href="#Gallery">
                 <img class="scroll-logo" src="./Assets/arrow-down-fill.svg">
             </a>
         </section>
         <section class="section" id="Gallery">
+            <div class="gallery-box">
+                <h1>My Work</h1>
+                <div class="carousel-container">
+                    <ul class="gallery-carousel">
+                        <li class="project" id="habit">
+                            <video class="demo"  loop muted>
+                                <source src="./Assets/HabitDemo.mov" type="video/mp4">
+                            </video>
+                            <div class="project-card">
+                                <p>A full stack habit management platform built with React, Express, Node.js, and MySQL</p>
+                            </div>
+                            
+                        </li>
+                        <li class="project" id="tasker">
+                            <video class="demo"  loop muted>
+                                <source src="./Assets/TaskerGif.mov" type="video/mp4">
+                            </video>
+                            <p></p>
+                        </li>
+                        <li class="project" id="echo">
+                            <div class="demo">
+                                <p>Demo Coming Soon</p>
+                            </div>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <a className="scroll-button" href="#Contact">
                 <img class="scroll-logo" src="./Assets/arrow-down-fill.svg">
             </a>
