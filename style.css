@@ -225,6 +225,11 @@ a {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
 }
+.img-wrap.four {
+    background: var(--default-yellow);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
 
 .demo {
     width: 40vw;
@@ -238,6 +243,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.demo:hover {
+    transform: translateY(-15px);
+    transition: .5s ease;
+    box-shadow: 10px 20px 5px rgba(0, 0, 0, 0.35);
+
 }
 
 .project-card {
@@ -261,6 +272,9 @@ a {
 }
 .project-card.three h2 {
     border-bottom: 5px solid var(--default-blue);
+}
+.project-card.four h2 {
+    border-bottom: 5px solid var(--default-yellow);
 }
 
 
