@@ -22,6 +22,7 @@
             </nav>
         </header>
         
+      
         <section class="section" id="Greeting">
             <div class="greeting-box">
                 <h1>Hey! I'm <span class="highlight"> Jake Choi</span>. <br/>I'm a front-end developer</h1>
@@ -32,13 +33,19 @@
         </section>
     
         <section class="section" id="About">
+            <section class="resume-overlay none">
+                <div class="resume-container">
+                    <button class="close-resume-btn">Close</button>
+                    <iframe src="./Assets/JC Resume 24 (1).pdf"></iframe>
+                </div>
+            </section>
             <div class="about-box">
                 <h1>About Me</h1>
                 <div class="about-details">
                     <div class="about-statement-btns hidden">
                         <p>I'm a recent college graduate who has decided to switch careers into front-end development. <br/> For the last year, I have been self-learning everything related to FE development.</p>
                         <div class="btn-container">
-                            <button>View Resume</button>
+                            <button class="view-resume-btn">View Resume</button>
                             <a href="https://github.com/choijake0207">
                                 <img src="./Assets/github-logo-fill.svg">
                                 GitHub
@@ -140,33 +147,43 @@
         </section>
         <section class="section" id="Contact">
             <div class="contact-box">
-                <h1>Get In Touch With Me!</h1>
+                <h1>Contact Me</h1>
                 <div class="contact-options">
                     <div class="socials-box">
-                        <h2>Connect With Me On</h2>
                         <ul class="socials-links">
-                            <li>Email:</li>
-                            <li>LinkedIn:</li>
-                            <li>GitHub</li>
+                            <li>
+                                <img src="./Assets/gmail.svg">
+                                <p>jake.ch0712@gmail.com</p>
+                            </li>
+                            <li>
+                                <img src="./Assets/linkedin.svg">
+                                <p>@jake-choi-2b94a81ba</p>
+                            </li>
+                            <li>
+                                <img src="./Assets/github-logo-fill.svg">
+                                <p>@choijake0207</p>
+                            </li>
                         </ul>
                     </div>
                  
                     <form action="https://formsubmit.co/jake.ch0712@gmail.com" class="contact-form" method="POST">
-                        <h2>Contact Form</h2>
-                        <input
+                        <label> Name:
+                            <input
                             type="text"
                             name="full-name"
-                            placeholder="Enter Your Full Name"
-                        >
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Enter Your Email"
-                        >
-                        <textarea
-                            name="message"
-                            placeholder="Enter A Message"
-                        ></textarea>
+                            >    
+                        </label>
+                        <label> Email:
+                            <input
+                                type="email"
+                                name="email"
+                            >
+                        </label>
+                        <label> Message:
+                            <textarea
+                                name="message"
+                            ></textarea>
+                        </label>
                         <button>Submit</button>
                     </form>
                     
