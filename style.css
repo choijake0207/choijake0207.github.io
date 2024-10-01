@@ -3,8 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background: var(--default-background);
-    font-family: "Mononoki";
+    font-family: "Satoshi Variable";
     overflow-y: scroll;
+    overflow-x: hidden;
   
 }
 html {
@@ -40,6 +41,10 @@ a {
 }
 .header a {
     font-size: 1.25em;
+    transition: .2s;
+}
+.header a:hover {
+    color: var(--default-blue)
 }
 .gh-logo {
     filter:invert(1)drop-shadow(1px 1px 2px var(--default-red));
@@ -92,6 +97,9 @@ a {
 
 
 /* ABOUT */
+#About {
+    position: relative;
+}
 .about-box {
     display: flex;
     flex-direction: column;
@@ -163,9 +171,21 @@ a {
 
 
 
-
-
-
+/* IFRAME */
+.resume-overlay.none {
+    display: none;
+}
+.resume-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.25);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
 
 /* Gallery */
@@ -279,43 +299,52 @@ a {
 
 
 /* CONTACT */
+#Contact {
+    background:rgb(29, 30, 35);
+}
 .contact-box {
     padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 .contact-box h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: var(--default-white);
+    color: var(--default-blue);
 }
 .contact-options {
+    margin-top: 20px;
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-evenly;
+    gap: 20px;
     width: 100%;
 }
-.contact-options h2 {
-    color: white;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
+
 .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    border: 5px solid var(--default-blue)
+    padding-top: 20px;
 }
-.contact-form input, .contact-form textarea {
+.contact-form label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: rgba(255, 255, 255, 0.5)
+}
+.contact-form label input, .contact-form label textarea {
     font-family: Mononoki;
     padding: 10px;
-    width: 80%;
     border: none;
     font-size: 1em;
     outline: none;
     border-radius: 5px;
+    background: var(--default-background);
+    color: white;
 }
 .contact-form textarea {
     resize: none;
@@ -326,17 +355,46 @@ a {
     border-radius: 5px;
     border: none;
     outline: none;
+    border: 2px solid var(--default-blue);
+    background: none;
+    color: var(--default-blue);
+    font-family: mononoki;
+    cursor: pointer;
+    align-self: flex-start;
+
+}
+.contact-form button:hover {
+    background: rgba(101, 192, 238);
+    color: white;
+    transition: .2s ease;
 }
 .socials-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid vaR(--default-green)
+}
+.socials-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.socials-links li {
+    list-style: none;
+    background: vaR(--default-background);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.5);
+}
+.socials-links li img {
+    height: 2em;
+    filter:invert(.8)
 }
 .socials-box, .contact-form {
-    width: 35vw;
+    width: 30vw;
     border-radius: 5px;
-    padding: 20px;
 
 }
 
