@@ -23,6 +23,9 @@ a {
     text-decoration: none;
     color: var(--default-white)
 }
+.wrap {
+    position: relative;
+}
 
 /* HEADER*/
 .header {
@@ -176,17 +179,39 @@ a {
     display: none;
 }
 .resume-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.25);
-    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
-
+.resume-container {
+    animation: resumeUp .2s ease-in forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+.resume-container iframe {
+    width: 700px;
+    height: 80%;
+}
+@keyframes resumeUp {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0)  
+    }
+}
 
 /* Gallery */
 #Gallery {
@@ -252,7 +277,6 @@ a {
 }
 
 .demo {
-    width: 40vw;
     height: 100%;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.35);
     border-radius: 5px;
